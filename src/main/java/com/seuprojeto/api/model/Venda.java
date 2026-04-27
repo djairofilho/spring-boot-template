@@ -6,8 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Venda {
 
     @Id
@@ -30,42 +34,6 @@ public class Venda {
         this.cliente = cliente;
         this.produto = produto;
         this.quantidade = quantidade;
-        this.data = data;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public Produto getProduto() {
-        return produto;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public LocalDate getData() {
-        return data;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public void setData(LocalDate data) {
         this.data = data;
     }
 }
